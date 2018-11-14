@@ -1,0 +1,298 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: cursive, sans-serif;
+  }
+body{
+background: linear-gradient(to bottom, skyblue,darkblue);
+background-image: url('images/ocean.jpg');
+background-repeat: no-repeat;
+background-position:0 60%;
+background-size: cover;
+width: 100vw;
+height: 100vh;
+overflow: hidden;
+  }
+.header{
+width:100%;
+height: 120px;
+top: 0;
+left: 0;
+background: #600cff42;
+position: absolute;
+display: flex;
+font-size: 3rem;
+justify-content: space-around;
+align-content: center;
+overflow: hidden;
+z-index: 4;
+    }
+.header h1{
+flex: 1;
+margin-left: 20px;
+color:red;
+width: 200px;
+height: 100%;
+background: url('images/Jaws.png') no-repeat center;
+background-size: contain;
+align-self: center;
+}
+.scoreboard{
+flex: 1;
+height: 100%;
+display: grid;
+text-transform: uppercase;
+justify-content: center;
+justify-items: center;
+align-items: center;
+align-content: center;
+font-weight: bold;
+color: #333;
+}
+.score{
+color: #ffc600;
+font-size: 4rem;
+}
+.timer{
+color: darkblue;
+font-size: 4rem;
+}
+.container{
+position: absolute;
+background: url('images/water.png');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: bottom center;
+width: 100%;
+height: 60vh;
+left: 0;
+bottom: 0;
+}
+.game{
+position: absolute;
+left: 50%;
+bottom: 50px;
+transform: translate(-50%);
+width: 900px;
+background: /*rgba(0, 191, 255,0.3)*/;
+height: 100%;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+padding: 10px;
+  }
+
+.wave{
+width: calc(33.33% - 5px);
+height: calc(90% - 5px);
+position: relative;
+bottom: 0;
+overflow: hidden;
+background:;
+}
+.wave:before{
+content:'';
+position: absolute;
+display: block;
+width: 100%;
+height: 30px;
+bottom: 0;
+background: url('images/wave.png');
+background-size: 70% 100%;
+background-repeat: no-repeat;
+background-position:  bottom center;
+z-index: 2;
+animation: wave 5s ease-out infinite;
+}
+
+@keyframes wave {
+0%{
+  left: 0;
+   }
+50%{
+  left: 10%;
+   }
+100%{
+  left: 0;
+    }
+}
+
+.shark{
+height:100%;
+width: 100%;
+background-color: ;
+background-image: url('images/shark.png');
+background-size: contain;
+position: absolute;
+background-repeat:no-repeat;
+background-position: bottom center;
+top: 100%;
+z-index: ;
+transition: all 0.5s;
+cursor: pointer;
+}
+.wave.up .shark{
+top: 0;
+}
+
+.boat{
+position: absolute;
+bottom: 70%;
+left: 20%;
+transform: translateX(-50%);
+height: 55vh;
+width: 65vh;
+background-image:url('images/boat.png');
+background-size:100% 100%;
+background-position: left center;
+}
+
+.barrel{
+position: absolute;
+width: 100px;
+height: 50px;
+bottom: 35vh;
+right: 45vw;
+background-image:url('images/barrel.png');
+background-size: 100% 100%;
+background-position: center;
+z-index: 4;
+transition: all 0.4s;
+cursor: pointer;
+}
+.barrel.start{
+bottom: 10vh;
+right: 15vw;
+}
+.barrels{
+position: absolute;
+width: 30vh;
+height: 20vh;
+bottom: 25vh;
+right: 10px;
+background-image:url('images/barrels.png');
+background-size:100% 100%;
+background-position: center;
+transition: all 0.2s;
+}
+
+.start{
+transform: translate(-50%,-50%);
+left: 50%;
+top: 30%;
+}
+.button {
+outline: 0;
+border-radius: 15px;
+border: 0;
+position: absolute;
+width: 200px;
+height: 100px;
+color: #fff;
+font-size: 2rem;
+padding: 10px;
+box-shadow: 0 5px 10px -5px #000;
+background: linear-gradient(to bottom,#999,#555);
+cursor: pointer;
+z-index: 5;
+}
+.overlay{
+position: absolute;
+top: 0;
+left:0;
+bottom:0;
+right:0;
+background: rgba(0, 191, 255,0.3);
+z-index: 10;
+transform: translateY(-100%);
+transition: all 0.5s;
+display: flex;
+}
+.overlay.active{
+transform: translateY(0);
+}
+.popup{
+margin: auto;
+width: 300px;
+height: 250px;
+position: relative;
+padding: 10px 20px;
+background: darkgray;
+box-shadow: 0 10px 5px rgba(0,0,0,0.3);
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+.popup h4{
+color: #f00;
+font-size: 2.5rem;
+}
+.popup .button{
+bottom: 20px;
+}
+.popup > *{
+margin: 0;
+}
+
+/*MEDIA */
+@media(max-width: 980px){
+  .game {
+  width: 90vw;
+  }
+ .barrel{
+   width: 60px;
+   height: 30px;
+ }
+
+}
+@media(max-width: 780px){
+  .boat, .barrels{
+    display: none;
+  }
+  .game {
+  width: 100vw;
+
+  }
+ .barrel{
+   width: 80px;
+   height: 40px;
+ }
+ .header{
+  min-height: 120px;
+  font-size: 2.5rem;
+ }
+ .score, .timer{
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+ }
+}
+@media (max-width: 480px){
+
+  .container{
+  height: 70vh;
+  padding: 0 10px;
+  }
+  .game {
+  width: 70vw;
+  bottom: 20px;
+  }
+  .wave{
+  height: calc(33.33% - 5px);
+  width: calc(90% - 5px);
+  }
+  .barrel{
+    width: 60px;
+    height: 30px;
+  }
+  .popup h4{
+  font-size: 2rem;
+  }
+  .button{
+  font-size: 1.5rem;
+  }
+}

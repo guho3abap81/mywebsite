@@ -1,0 +1,88 @@
+/*========= MEDIA QUERIES ==============*/
+
+@media(max-width: 980px){
+#showcase .main-head{
+margin-top: 65vh;
+   }
+#showcase h1{
+font-size: 4rem
+    }
+#showcase .img-box {
+height: 90%;
+  }
+}
+
+/*========= SCREENS under 780px ==============*/
+@media(max-width: 780px){
+
+#showcase .main-head{
+margin-top: 70vh;
+text-align: center;
+padding-left: 0;
+  }
+
+#about .about-content {
+display: block;
+  }
+#about .img-box {
+margin: 0 auto;
+}
+#projects .projects-content{
+padding: 10px;
+  }
+
+#projects .project .description{
+font-size: 1rem;
+  }
+}
+/*========= SCREENS under 480px ==============*/
+@media(max-width: 480px){
+#navbar{
+  height: auto;
+  padding: 5px;
+  z-index: 5;
+  border-bottom: 0;
+  background-color: var(--primary-color-hover);
+}
+#navbar ul{
+  height: auto;
+  display: none;
+}
+
+#navbar ul li {
+  width: 100%;
+  float: left;
+  position: relative;
+}
+#navbar ul li a{
+  width: 100%;
+  border-bottom: solid 1px var(-primary-color);
+}
+
+#navbar a#openup{
+  display: block;
+}
+
+#showcase h1{
+  font-size: 2.2rem;
+}
+#showcase h2{
+  font-size: 1.2rem;
+}
+#about .about-content{
+  text-align: left;
+}
+#about .about-content p{
+  font-size: 1rem;
+  }
+#projects .projects-content{
+  grid-template-columns: 1fr;
+  }
+#projects .project{
+  grid-column: span 1;
+  margin-top: auto;
+  }
+#footer span{
+font-size: 1rem;
+}
+}
