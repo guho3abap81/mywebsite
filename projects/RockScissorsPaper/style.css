@@ -10,12 +10,100 @@ body {
   background-color: #333;
   color: #fff;
 }
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent,rgba(0,0,0,0.7));
+  z-index: 5;
+  display: flex;
+  transform: translateY(-100%);
+  transition: 1s;
+}
+.overlay.active {
+  transform: translateY(0);
+}
+.overlay .gameBox{
+margin: auto;
+width: 400px;
+height: 500px;
+background: linear-gradient(to bottom, orange, red);
+border: 10px solid #f4f4f4;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0 10px;
+}
+.overlay .gameBox img {
+  margin-bottom: 20px;
+  height: 100px;
+}
+.message {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+
+}
+.start {
+  width: 60%;
+  height: 40px;
+  border: none;
+  background: purple;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+.start:before {
+  content:'PLAY';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: darkblue;
+  transform-origin: center;
+  transition: 0.1s;
+  transform: scaleX(0);
+  z-index: ;
+}
+.start:hover:before{
+ transform: scaleX(1);
+}
+#finalGoal {
+  height: ;
+  width: 100px;
+  background: linear-gradient(to bottom, #656565,#000);
+  border: none;
+  outline: 0;
+  border-radius: 10px;
+  padding: 10px 5px;
+  box-shadow: inset 5px 5px 10px rgba(0,0,0,0.2),
+              0px 0px 0px 2px #777;
+  margin: 15px;
+  font-size: 2rem;
+  color: #fff;
+}
+.endGame {
+  color: orange;
+}
 header{
   height: 10vh;
   display: flex;
+  background: #666;
+}
+header img {
+  height: 80%;
+  margin: auto;
 }
 header h1 {
   margin: auto;
+  display: none;
 }
 header h1 .orange {
   color: orange;
@@ -26,7 +114,11 @@ section {
   margin: 0 auto;
 }
 #result{
-height: 10vh;
+height: 12vh;
+text-align: center;
+}
+#result h3 {
+  margin: 5px;
 }
 .scoreboard {
   height: 50px;
@@ -36,7 +128,7 @@ height: 10vh;
 }
 .player {
   background: darkcyan;
-  padding: 5px 10px;
+  padding: 2px;
   border-radius: 5px;
   text-align: center;
   flex: 1
@@ -87,7 +179,7 @@ height: ;
     transform: translate(-50%,-50%) scale(1);
   }
   100%{
-    transform: translate(-50%,-50%) scale(0.5);
+    transform: translate(-50%,-50%) scale(0.7);
   }
 }
 .gameboard {
@@ -96,6 +188,7 @@ height: ;
   justify-content: space-around;
   align-items: center;
   background: #222;
+  overflow: hidden;
 }
 .action {
   height: 100%;
@@ -123,20 +216,23 @@ height: ;
   0%{
     transform: translateY(0px);
   }
-  15%{
+  10%{
     transform: translateY(-30px);
   }
   30%{
-    transform: translateY(0px);
+    transform: translateY(10px);
   }
-  45%{
+  40%{
     transform: translateY(-30px);
   }
   60%{
-    transform: translateY(0px);
+    transform: translateY(10px);
   }
-  80%{
-    transform: translateY(-30px);
+  70%{
+    transform: translateY(-20px);
+  }
+  90%{
+    transform: translateY(0px);
   }
   100%{
     transform: translateY(0px);
@@ -146,7 +242,7 @@ height: ;
   transform: rotateY(180deg);
 }
 #picker {
-margin-top: 30px;
+margin-top: 20px;
 height: 20vh;
 display: flex;
 flex-direction: column;
@@ -161,7 +257,7 @@ height: auto;
 display: flex;
 justify-content: space-around;
 align-items: center;
-width: 80%;
+width: 60%;
 }
 .choice{
   height: 100px;
@@ -175,10 +271,10 @@ width: 80%;
   transition: all 0.3s;
 }
 .choice:hover {
-  box-shadow: 0 0 30px #fff;
+  box-shadow: 0 0 20px #fff;
 }
 .choice.active {
-  box-shadow: 0 0 30px #ff0;
+  box-shadow: 0 0 0 5px #ffc600;
 }
 .choice img {
   width: 100%;
