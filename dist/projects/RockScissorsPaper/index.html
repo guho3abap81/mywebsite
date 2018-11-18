@@ -8,12 +8,26 @@
   </head>
   <body>
     <header>
+      <img src="images/rps2.png" alt="">
       <h1>ROCK - <span class="orange">SCISSORS</span> - PAPER</h1>
+
     </header>
 <hr>
+<div class="overlay active">
+  <div class="gameBox">
+    <img src="images/rps2.png" alt="">
+    <label for="finalNumber"></label>
+      <input type="number" id="finalGoal" >
+      <span class="message">Enter number as a final goal</span>
+      <button type="button" class="start" >PLAY</button>
+
+  </div>
+</div>
     <section id="result">
+      <h3>First one to <span class="endGame"> </span> is the winner!<h3>
+
       <div class="scoreboard">
-          <h2 class="player">USER</h2><div class="score">
+        <h2 class="player">USER</h2><div class="score">
             <span id="userScore">0</span>:<span id="computerScore">0</span>
           </div>
           <h2 class="player">COMPUTER</h2>
@@ -25,7 +39,7 @@
         <p>Make A Choice To See The Outcome!</p>
       </div>
           <div class="counter">
-          <span>3</span>
+          <span>2</span>
           </div>
 
       <div class="gameboard">
