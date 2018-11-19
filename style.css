@@ -237,20 +237,23 @@ color: #f4f4f4;
 #about .img-box{
 width: 200px;
 height: 200px;
-z-index: 2;
 position: relative;
-perspective: 500px;
 display: flex;
-overflow: hidden;
 border-radius: 50%;
-align-self: center;
-border: inset 10px #996600;
+background: #996600;
+align-self: baseline;
+background: linear-gradient(to left, grey, #7777);
+border: ridge 10px  #996600;
+overflow: hidden;
 }
+
 #about .img-box img{
-margin: auto;
-width: auto;
+width: 100%;
+position: absolute;
 height: 100%;
-animation: imageShow 2s linear forwards;
+bottom: 0;
+left: 0;
+z-index: 2;
 }
 
 /*=================== SKILLS ======================*/
@@ -271,9 +274,11 @@ min-height: 300px;
 text-align: center;
 border: solid 2px #996600;
 border-radius: 0;
-box-shadow: inset 2px 0 5px 0px #fff,
+box-shadow: inset 2px 0 5px 0px rgba(0,0,0,0.5),
+            inset 3px 0 5px 0px #fff,
+            inset 5px 0 10px 0px rgba(0,0,0,0.5),
             inset -5px -5px 10px -5px rgba(0,0,0,1),
-            inset -15px -15px 20px -10px rgba(0,0,0,0.5);
+            inset -15px -15px 20px -10px rgba(0,0,0,0.7);
 }
 .box img{
 height: 80px;
@@ -315,14 +320,14 @@ margin-top: 30px;
 width: 100%;
 display: grid;
 grid-gap: 20px;
-grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
 }
 
 #projects .project{
 width: 100%;
 height: 300px;
 grid-column: ;
-background: #ffc600;
+background: linear-gradient( 45deg, #ffc600, #996600);
 color: var(--secondary-color);
 display: flex;
 position: relative;
@@ -330,9 +335,7 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 overflow: hidden;
--webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
--ms-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+border-radius: 30px;
 }
 #projects .project .description{
 position: absolute;
@@ -340,7 +343,7 @@ height: 100%;
 width: 100%;
 top: 0;
 transform: translateY(80%);
-transition: 1s;
+transition: 0.5s;
 background: var(--dark-grey-color);
 color: #fff;
 display: flex;
@@ -366,7 +369,7 @@ position: relative;
 .project-image{
 position: relative;
 width: 100%;
-height: 70%;
+height: 80%;
 background: purple;
 }
 .project-image img{
