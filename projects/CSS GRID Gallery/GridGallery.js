@@ -6,6 +6,8 @@ const overlay = document.querySelector(".overlay");
 const overlayInner = document.querySelector(".overlay-inner")
 const overlayImage = document.querySelector("img");
 const overlayClose = document.querySelector(".close");
+const arrowLeft = document.querySelector(".arrow-left");
+const arrowRight = document.querySelector(".arrow-right");
 
 //GETTING RANDOM NUMBERS BETWEEN 1 AND THE LIMIT
 function randomNumber(limit){
@@ -25,9 +27,26 @@ return `<div class="item h${h} v${v}">
 //SHOW CLICKED IMAGE
 function handleClick(e){
   overlay.classList.add("open");
-  overlayInner.classList.add("open")
-  const source = e.currentTarget.querySelector("img").src;
+  overlayInner.classList.add("open");
+  let clickedImage = e.currentTarget.querySelector("img");
+  let prevImage = clickedImage.parentElement.previousElementSibling.querySelector("img");
+  let nextImage = clickedImage.parentElement.nextElementSibling.querySelector("img");
+  let source = clickedImage.src;
   overlayImage.src = source;
+//  console.log(source)
+
+
+    arrowLeft.addEventListener("click", function(){
+         overlayImage.src = prevImage.src;
+         prevImage = prevImage.parentElement.previousElementSibling.querySelector("img");
+     });
+
+      arrowRight.addEventListener("click",  function(){
+
+
+        overlayImage.src = nextImage.src;
+        nextImage = nextImage.parentElement.nextElementSibling.querySelector("img");
+      });
 }
 
 //close the images
@@ -79,7 +98,7 @@ addExtraItems();
 
 overlayClose.addEventListener("click",close);
 
-overlay.addEventListener("click",close);
+//overlay.addEventListener("click",close);
 
 document.body.addEventListener("keydown",function(e){
   if(e.code === "Escape"){

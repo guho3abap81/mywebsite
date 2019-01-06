@@ -6,21 +6,7 @@ const arrows = document.querySelectorAll(".arrow");
 let isDown = false;
 let startX;
 let scrollLeft;
-/*
-slider.addEventListener("mousedown",(e) => {
-   isDown = true;
 
-  //arrows.forEach(arrow => arrow.classList.add("active"));
-
-      startX = e.pageX - slider.offsetLeft;
-      scrollLeft = slider.scrollLeft;
-      slider.classList.add("active");
-      //showPointer(e);
-      setTimeout(()=>{
-      pointer.classList.remove("active")
-      },1000);
-});
-*/
 slider.addEventListener("mousedown",clickOnSlider);
 
 function clickOnSlider(e){

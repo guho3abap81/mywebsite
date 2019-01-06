@@ -69,6 +69,9 @@ font-size: 1rem;
 #showcase h2{
   font-size: 1.2rem;
 }
+.container h2{
+  font-size: 1.5rem;
+}
 #about .about-content{
   text-align: left;
 }
