@@ -28,26 +28,41 @@ return `<div class="item h${h} v${v}">
 function handleClick(e){
   overlay.classList.add("open");
   overlayInner.classList.add("open");
-  let clickedImage = e.currentTarget.querySelector("img");
-  let prevImage = clickedImage.parentElement.previousElementSibling.querySelector("img");
-  let nextImage = clickedImage.parentElement.nextElementSibling.querySelector("img");
-  let source = clickedImage.src;
-  overlayImage.src = source;
-//  console.log(source)
+  const firstImage = document.querySelector(".gallery > div:first-of-type img");
+  const lastImage = document.querySelector(".gallery > div:last-of-type img");
+  let currentImage = e.currentTarget.querySelector("img");
+  let prevImage;
+  let nextImage;
+  overlayImage.src = currentImage.src;
 
-
+    //change to previous image
     arrowLeft.addEventListener("click", function(){
-         overlayImage.src = prevImage.src;
-         prevImage = prevImage.parentElement.previousElementSibling.querySelector("img");
-     });
 
+        if(currentImage === firstImage){
+              overlayImage.src = lastImage.src;
+              currentImage = lastImage;
+         }else{
+              prevImage = currentImage.parentElement.previousElementSibling.querySelector("img");
+              overlayImage.src = prevImage.src;
+              currentImage = prevImage;
+         }
+
+      });
+
+     //change to next image
       arrowRight.addEventListener("click",  function(){
 
+        if(currentImage === lastImage){
+              overlayImage.src = firstImage.src;
+              currentImage = firstImage;
+        }else{
+              nextImage = currentImage.parentElement.nextElementSibling.querySelector("img");
+              overlayImage.src = nextImage.src;
+              currentImage = nextImage;
+         }
 
-        overlayImage.src = nextImage.src;
-        nextImage = nextImage.parentElement.nextElementSibling.querySelector("img");
       });
-}
+};
 
 //close the images
 function close(){
@@ -68,8 +83,7 @@ gallery.innerHTML = html;
 const items = document.querySelectorAll(".gallery .item");
 //gallery.addEventListener("click",handleClick);
 
-
-
+///////////////////////////////////////////////////////////////////////////////
 
 //ADDING EVENT LISTENERS
 items.forEach(item => item.addEventListener("click",handleClick));
