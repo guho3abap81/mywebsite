@@ -29,8 +29,8 @@ text-shadow: 0 5px 10px  #000;
 position: fixed;
 top: 0;
 left: 0;
-right: 0;
-bottom: 0;
+width: 100vw;
+height: 100vh;
 background: rgba(0,0,0,0.7);
 display: none;
 z-index: 2;
@@ -39,25 +39,26 @@ z-index: 2;
 display: block;
 }
 .arrow {
-top:50%;
+
+top: 50%;
 width: 50px;
 height: 50px;
 transform: translateY(-50%) rotate(45deg);
 position: absolute;
-z-index: 3;
+z-index: 5;
 cursor: pointer;
 }
 .arrow:hover {
-border-color: gold;
+border-color: #996600;
 }
 .arrow-left{
-left: 50px;
+left: 10%;
 border-left: 10px solid #fff;
 border-bottom: 10px solid #fff;
 
 }
 .arrow-right{
-right: 50px;
+right: 10%;
 border-right: 10px solid #fff;
 border-top: 10px solid #fff;
 
@@ -66,7 +67,7 @@ border-top: 10px solid #fff;
 position: fixed;
 top: 50%;
 left: 50%;
-width: 500px;
+width: auto;
 height: auto;
 background: #fff;
 padding: 10px;
@@ -81,7 +82,8 @@ box-shadow: -20px 0 20px -10px #000,
 }
 
 .overlay-inner img{
-width: 100%;
+width: auto;
+height: 90vmin;
 position: relative;
 }
 
@@ -93,10 +95,14 @@ z-index: 3;
 .close{
 color: #000;
 border: 0;
-font-size: ;
-background: none;
+width: 70px;
+height: 70px;
+position: fixed;
+top: 0;
+right: 0;
+font-size: 2.5rem;
+background: #fff;
 text-transform: uppercase;
-margin-bottom: 5px;
 cursor: pointer;
 }
 .close:hover{
@@ -182,4 +188,5 @@ transform: rotateX(0);
 }
 .item:hover .item-overlay{
 transform: translateY(0);
+cursor: pointer;
 }
