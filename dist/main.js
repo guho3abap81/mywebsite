@@ -33,7 +33,7 @@ clicked.click(function(e){
     e.preventDefault();
     //animate body to  section +clicked hashtag position;
     $('html, body').animate({
-    scrollTop: $(this.hash).offset().top - navBar},800);
+    scrollTop: $(this.hash).offset().top - navBar},500);
 });
 
 /////////////////////////
