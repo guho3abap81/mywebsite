@@ -37,16 +37,15 @@ const sliders = document.querySelectorAll(".slide");
 
 function checkForScroll(e){
 
-    sliders.forEach(slide => {
+       sliders.forEach(slide => {
 
-      const topPos = slide.offsetTop;
+         const topPos = slide.offsetTop;
 
-      if(window.scrollY > topPos - 150){
-        slide.classList.add("active")
-      }else{
-        slide.classList.remove("active")
-      }
-
+          if(window.scrollY > topPos - 200){
+            slide.classList.add("active")
+          }else{
+            slide.classList.remove("active")
+          }
     })
 
 };

@@ -3,7 +3,7 @@
 
 /* CSS Variables*/
 :root{
---primary-color: #b90415;
+--primary-color: #555 /*#b90415*/;
 --primary-color-hover: rgba(185, 4, 21,0.8);
 --secondary-color: #103063;
 --secondary-color-hover: #143f85;
@@ -15,7 +15,9 @@
 margin: 0;
 padding: 0;
 box-sizing: border-box;
+outline: none;
 }
+
 body,html{
 font-family: 'PT Sans',sans-serif;
 background-color: #252529;
@@ -40,7 +42,7 @@ overflow: hidden;
 /*SECTION*/
 .section{
 padding: 2rem 0;
-min-height: 50vh;
+min-height: 100vh;
 text-align: center;
 
 }
@@ -52,6 +54,7 @@ grid-template-columns: 1fr auto auto 1fr;
 grid-gap: 20px;
 align-items: center;
 text-shadow: 2px 2px 2px #000;
+margin-bottom: 50px;
 }
 .section-head::before, .section-head::after{
 content:'';
@@ -67,7 +70,7 @@ background: linear-gradient(to var(--direction, left),#996600,transparent);
 #navbar {
 height: 65px;
 width: 100%;
-background-color: #333;
+background-color: #000;
 color: #eee;
 position: fixed;
 top: 0;
@@ -77,17 +80,21 @@ box-shadow: 0 15px 15px -10px rgba(0,0,0,0.5);
 #navbar ul{
 position: absolute;
 width: 100%;
-height: 40px;
+height: 50px;
 top: 25px;
-float: ;
+display: flex;
+justify-content: center;
+align-items: center;
 background-color: var(--primary-color);
+list-style: none;
 }
 #navbar ul li{
-display: inline-block;
+display: ;
 position: relative;
-width: 90px;
-height: 40px;
+width: ;
+height: 50px;
 padding: 10px 0;
+flex: 1;
 text-align: center;
 text-decoration: none;
 background: var(--dark-grey-color);
@@ -102,7 +109,7 @@ color: #ffc600;
 content: attr(data-name);
 position: absolute;
 width: 100%;
-height:100%;
+height: 100%;
 left:0;
 top: 0;
 display: flex;
@@ -152,7 +159,7 @@ z-index: 2;
 position: absolute;
 top: 5px;
 height: 10px;
-background: linear-gradient(45deg,pink,purple);
+background: linear-gradient(45deg,gold,#996600);
 width: 0;
 }
 /* ====================== SHOWCASE ==================*/
@@ -161,7 +168,12 @@ width: 100%;
 height: 100vh;
 position: relative;
 overflow: hidden;
-
+background-image: url('images/rainglass.jpg');
+background-size: cover;
+background-position: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
 }
 #showcase .overlay{
 position: absolute;
@@ -178,35 +190,28 @@ transition: 1s;
 animation: crack 2.5s linear forwards;
 }
 
-#showcase .main-head{
-font-size: 5rem;
-margin-top: 60vh;
-width: ;
-background: linear-gradient(to right, rgba(0,0,0,0.3),transparent);
-padding-left: 20px;
-min-height: 100px;
-z-index: 2;
-border-bottom: 5px solid var(--primary-color);
-perspective: 800px;
-}
 #showcase h1{
 font-size: 5rem;
 position: relative;
+margin-left: 20px;
 display: block;
 margin-bottom: 0;
 padding: 0;
 z-index: 4;
 color: var(--gold-color);
-transform: translateZ(-500px) translateY(-500px);
+transform: ;
 animation: slide 3s linear forwards;
 transform-origin: center;
 transform-style: preserve-3d;
 text-shadow: 0px 0px 15px #000;
+transform: rotateX(180deg);
 }
 #showcase h2{
 font-style: italic;
+position: ;
+margin-left: 20px;
 font-size: 2rem;
-transform:  translateY(-800px) translateZ(-500px);
+margin-bottom: 0;
 animation: slide 2s ease-in-out forwards;
 animation-delay: 2s;
 z-index: 4;
@@ -214,9 +219,26 @@ text-shadow: 2px 2px 2px #000;
 transform-style: preserve-3d;
 transform-origin: center;
 display: block;
+transform: rotateX(-180deg);
 }
-
-
+.wall{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(8,1fr);
+  grid-auto-rows: 120px;
+  grid-gap: 20px;
+  padding: 20px;
+  background-image: url('images/image1.jpg');
+  background-size: cover;
+  background-position: center;
+  display: none;
+}
+.brick{
+grid-column: span 2;
+background: linear-gradient(45deg, orange,red, brown);
+}
 /* =================== ABOUT ===========================*/
 #about{
 background: rgba(0,17,102,0.7);
@@ -224,12 +246,13 @@ background: rgba(0,17,102,0.7);
 
 #about .about-content {
 display: grid;
-grid-template-columns: 250px auto;
+height: 100%;
+grid-template-columns: 200px auto;
 margin-top: 30px;
 grid-gap: 20px;
 }
 #about .about-content article{
-padding: 25px 10px;
+padding: 20px 10px;
 text-align: left;
 }
 
@@ -239,81 +262,115 @@ color: #f4f4f4;
 }
 
 #about .img-box{
-width: 200px;
-height: 200px;
+width: 180px;
+height: 180px;
 position: relative;
 display: flex;
+justify-content: center;
+align-items: center;
 border-radius: 50%;
-background: #996600;
-align-self: baseline;
-background: linear-gradient(to left, grey, #7777);
+align-self: center;
+background: ;
 border: ridge 10px  #996600;
 overflow: hidden;
 transition: all 0.5s;
 transform: rotate(-30deg);
+text-align: center;
+font-size: 7rem ;
+line-height: ;
 }
+
 #about.active .img-box{
 transform: rotate(0);
-}
-#about .img-box img{
-width: 100%;
-position: absolute;
-height: 100%;
-bottom: 0;
-left: 0;
-z-index: 2;
 }
 
 /*=================== SKILLS ======================*/
 #skills{
 background:;
+
 }
 #boxes{
-margin-top: 30px;
+margin: auto;
 display: grid;
+grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
 grid-gap: 20px;
-grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+width: 100%;
+justify-content: center;
 }
 
 .box{
-padding: 20px 30px;
+padding: 5px;
 position: relative;
-background: #f7f7f7;
-min-height: 300px;
+height: 300px;
 text-align: center;
-border: solid 2px #996600;
-border-radius: 0;
-transform: scale(0.8);
+display: flex;
+flex-direction: column;
+width: 100%;
+border: solid 2px  #996600;
+background: rgba(255, 255, 255, 0.7);
+border-radius: 10px;
 transition: 0.5s;
+}
+.skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  transform: scale(0.8);
+  transition: 1s;
+  transform-origin: center;
+  box-shadow: inset 2px 0 5px 0px rgba(0,0,0,0.5),
+              inset 3px 0 5px 0px #fff,
+              inset 5px 0 10px 0px rgba(0,0,0,0.5),
+              inset -5px -5px 10px -5px rgba(0,0,0,1),
+              inset -15px -15px 20px -10px rgba(0,0,0,0.7);
+  }
+
+
+.box .skill img{
+height: 60px;
+width: auto;
+margin-bottom: 10px;
+}
+.box .skill h3{
+color: var(--dark-grey-color);
+}
+.box ul{
+text-transform: capitalize;
+margin: auto;
+}
+.box ul li{
+display: block;
+list-style-type: disc;
+font-size: 1.2rem;
+}
+.box .content{
+color: #996600;
+background: transparent;
+font-size: 1.2rem;
+flex: 1;
+padding: 10px;
+display: flex;
+transform: scale(0);
+transition: 1s;
+transform-origin: center;
+/*
 box-shadow: inset 2px 0 5px 0px rgba(0,0,0,0.5),
             inset 3px 0 5px 0px #fff,
             inset 5px 0 10px 0px rgba(0,0,0,0.5),
             inset -5px -5px 10px -5px rgba(0,0,0,1),
             inset -15px -15px 20px -10px rgba(0,0,0,0.7);
+            */
 }
-#skills.active .box{
+#skills.active .box .content{
 transform: scale(1);
 }
-.box img{
-height: 80px;
-width: auto;
-}
-.box h3{
-color: var(--dark-grey-color);
-}
-.box ul{
-
-text-transform: capitalize;
-}
-.box ul li{
-display: block;
-list-style-type: none;
-}
-.box .content{
-color: #555;
-border-top: dotted 2px #555;
-padding-top: 10px;
-text-align: center;
+#skills.active .box .skill{
+transform: scale(1);
 }
 .box:hover img{
 transform: rotateY(360deg) scale(1.1);
@@ -326,7 +383,7 @@ margin: auto;
 /*======= PORTFOLIO ========*/
 
 #projects{
-background: #fcc60032;
+background: rgba(255,255,255, 0.8);
 }
 .projects-content{
 padding: 0;
@@ -334,12 +391,12 @@ margin: 30px 0;
 width: 100%;
 display: grid;
 grid-gap: 20px;
-grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
 }
 
 .project{
 width: 100%;
-height: 300px;
+height: 250px;
 grid-column: ;
 background: linear-gradient( 45deg, #ffc600, #996600);
 color: var(--secondary-color);
@@ -349,19 +406,17 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 overflow: hidden;
-border-radius: 30px;
 transition: all 0.5s;
-transform: translate(-30px,30px);
+transform: translateY(20px);
+box-shadow: 0 15px 10px -10px #555;
 }
-.project:nth-child(even){
-transform: translate(30px,30px);
-}
+
 .project .description{
 position: absolute;
 height: 100%;
 width: 100%;
 top: 0;
-transform: translateY(80%);
+transform: translateY(70%);
 transition: 0.5s;
 background: var(--dark-grey-color);
 color: #fff;
@@ -369,17 +424,19 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-padding: 15px;
+padding: 10px;
 font-size: 1rem;
+border-top: 5px solid #ffc600;
 }
+
 .project.active {
-transform: translate(0,0);
+transform: translateY(0);
 }
 .project .description:hover{
 transform: translateY(0);
 }
 .project .description span{
-color: #fff;
+color: #ffc600;
 }
 .project .description p{
 margin: auto;
@@ -389,10 +446,11 @@ margin: auto;
 position: relative;
 }
 .project-image{
-position: relative;
+position: absolute;
+top: 0;
 width: 100%;
-height: 80%;
-background: purple;
+height: 70%;
+;
 }
 .project-image img{
 position: relative;
@@ -404,18 +462,22 @@ height: 100%;
 /*========= CONTACTS ==============*/
 .contact-box{
 margin-top: 30px;
-display: grid;
-grid-gap: 20px;
-grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+display: flex;
+height: 100%;
+width: 100%;
+justify-content: space-around;
+align-items: center;
 }
 .contact{
 background-color: #bada55;
-border-radius: 10px;
-border: 5px solid white;
+border: 10px solid white;
 text-align: center;
 box-shadow: 0 0 4px rgba(0,0,0,0.5);
 position: relative;
-min-height: 130px;
+width: 200px;
+height: 200px;
+border-radius: 50%;
+overflow: hidden;
 color: #fff;
 }
 .contact:nth-child(2){
@@ -438,6 +500,7 @@ display: grid;
 align-items: center;
 justify-content: center;
 transition: 0.5s;
+border-radius: 50%;
 z-index: 2;
 font-size: 75px;
 text-shadow: 2px 3px 3px #000;
@@ -450,14 +513,13 @@ top: 60px;
 text-align: center;
 background-color: ;
 }
-.contact .details a{
+.contact a{
 color: #fff;
 text-decoration: none;
 }
 
 .contact:hover .icon{
-transform: translateY(-30px) scale(0.4);
-border-bottom: 3px solid #fff;
+transform: translateY(-60px) scale(0.4);
 }
 
 /*========= FOOTER ==============*/
@@ -495,13 +557,10 @@ vertical-align: center;
 
 
 @keyframes slide {
-  0%{
-    transform: translateY(-600px);
-  }
-  80%{
-    transform: translateY(50px) rotate(10deg);
-  }
+0%{
+  transform: rotateX(180deg);
+}
  100%{
-    transform: translateY(0);
+    transform: rotateX(0);
   }
 }

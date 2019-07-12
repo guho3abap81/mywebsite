@@ -15,8 +15,8 @@ overflow: hidden;
 
 }
 .memory-game{
-width: 70%;
-height: 80vh;
+width: 80%;
+height: 90vh;
 margin: auto;
 position: relative;
 display: flex;
@@ -64,11 +64,11 @@ left: 0;
 top: 0;
 z-index: 5;
 display: none;
-transition: 1s ease-out;
+transition: all 2s;
 }
 .overlay{
 transform: translateY(100%);
-background: url('images/WengerThumbUp.png') no-repeat bottom/contain;
+background: url('images/Emery-thumb-up.png') no-repeat bottom/contain;
 }
 .overlay.active{
 display: block;
@@ -132,7 +132,8 @@ height: 60vh;
   padding: 0 20px;
   }
   .memory-game{
-  height: 80vh;
+  width: 95%;
+  height: 95vh;
   }
   .memory-card {
   width: calc(25% - 10px);
