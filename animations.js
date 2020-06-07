@@ -43,7 +43,7 @@ function checkForScroll(e){
 
           if(window.scrollY > topPos - 200){
             slide.classList.add("active")
-          }else{
+          } else{
             slide.classList.remove("active")
           }
     })

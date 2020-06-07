@@ -41,7 +41,7 @@ align-items: center;
 justify-content: center;
 position: relative;
 height: calc(100% - 20px);
-width: 300px;
+width: 500px;
 background-color: green;
 transform: rotateY(0deg) translateX(0);
 transition: 0.3s;
@@ -50,6 +50,7 @@ transform-origin: right;
 object-fit: fill;
 box-shadow: 0 50px 40px -30px rgba(0,0,0,0.7);
 }
+
 .item:nth-child(even){
 background-color: yellow;
 transform: rotateY(0deg) translateX(0);

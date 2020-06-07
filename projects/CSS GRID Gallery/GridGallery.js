@@ -97,8 +97,11 @@ function addExtraItems(){
   let newItems = [...items];
   //callculating surface of the existing images
   const itemsArea = newItems.reduce((total,item) => total +(item.offsetWidth * item.offsetHeight),0);
+
+  console.log({gArea, itemsArea})
   //calculate how many images we need
-  let freeSpace = (gArea - itemsArea)/10000;
+  let freeSpace = Math.floor((gArea - itemsArea)/10000);
+  console.log(freeSpace)
   //create an array consisting the extra items
   const extraDigits = Array.from({length:freeSpace},()=>[1,1]);
   //mapping over the array to return div element for each of them
@@ -107,6 +110,8 @@ function addExtraItems(){
   gallery.insertAdjacentHTML("beforeend", addhtml);
   //adding eventlistener to the new items
   gallery.querySelectorAll(".item").forEach(item => item.addEventListener("click",handleClick));
+
+
 }
 addExtraItems();
 

@@ -22,15 +22,15 @@ function clickOnSlider(e){
 };
 
 slider.addEventListener("mouseleave",() => {
-isDown = false;
-slider.classList.remove("active");
-arrows.forEach(arrow => arrow.classList.remove("active"));
+    isDown = false;
+    slider.classList.remove("active");
+    arrows.forEach(arrow => arrow.classList.remove("active"));
 });
 
 slider.addEventListener("mouseup",() => {
-isDown = false;
-slider.classList.remove("active");
-arrows.forEach(arrow => arrow.classList.remove("active"));
+     isDown = false;
+     slider.classList.remove("active");
+     arrows.forEach(arrow => arrow.classList.remove("active"));
 });
 
 slider.addEventListener("mousemove",(e) => {
@@ -54,8 +54,7 @@ function showPointer(e){
 }
 /////////////////////////
 function generateHTML(limit,i){
-return`<div class="item item ${i}">
-<img src="https://source.unsplash.com/random/400x4${randomNumber(9)}${randomNumber(9)}"></div>`
+return`<div class="item item ${i}"><img src="https://source.unsplash.com/random/400x4${randomNumber(9)}${randomNumber(9)}"></div>`
 }
 
 function randomNumber(limit){

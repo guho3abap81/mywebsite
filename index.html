@@ -6,8 +6,7 @@
     <title>DSTAYKOV Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
   </head>
   <body>
 
@@ -15,7 +14,7 @@
 <div id="showcase">
     <header>
       <nav id="navbar">
-        <a href="#menu" id="openup"> MENU &#9776;</a>
+        <a href="#menu" id="openup">&#9776;</a>
           <ul class="menu">
             <li><a href="#showcase" data-name = "Home"></a></li>
             <li><a href="#about" data-name = "About Me"></a></li>
@@ -23,233 +22,102 @@
             <li><a href="#skills" data-name = "Skills"></a></li>
             <li><a href="#contact" data-name = "Contact Me"></a></li>
          </ul>
-         <div class="percent">0%</div>
 
-         <div class="scrollbar">
-         </div>
+           <div class="scrollbar"><div class="percent">0%</div></div>
 
        </nav>
     </header>
 
-<div class="overlay">
-  <h1>Dimitar Staykov</h1>
-  <h2>Front-End Developer</h2>
-  <ul>
-    <a href="https://github.com/guho3abap81" target="_blank" title="github"><li><i class="fab fa-github"></i></li></a>
-    <a href="https://www.linkedin.com/in/dimitar-staykov-249613158/ target="_blank" title="linkedin"><li><i class="fab fa-linkedin"></i></li></a>
-    <a href="http://mailto:DSTAYKOV19@GMAIL.COM" target="_blank" title="e-mail"><li><i class="far fa-envelope"></i></li></a>
-  </ul>
+        <div class="overlay slide">
+
+            <h1>Dimitar Staykov</h1>
+            <h2>Front-End Developer</h2>
+            <ul class="social-items">
+              <a href="https://github.com/guho3abap81" target="_blank" title="github"><li><i class="fab fa-github"></i></li></a>
+              <a href="https://www.linkedin.com/in/dimitar-staykov-249613158/" target="_blank" title="linkedin"><li><i class="fab fa-linkedin"></i></li></a>
+              <a href="http://mailto:DSTAYKOV19@GMAIL.COM" target="_blank" title="e-mail"><li><i class="far fa-envelope"></i></li></a>
+            </ul>
+
+        </div>
+
 </div>
 
-
-</div>
 
 <!---ABOUT section-------------------------------------------------->
 <section id="about" class="section slide">
+
   <h2 class="section-head"><i class="fas fa-pen"></i>  About Me</h2>
+  <div class="container shadow">
 
-        <div class="container">
+      <div class="about-content">
 
-               <div class="about-content">
+           <div class="head-box">
+            <i class="fas fa-user-tie"></i>
+              <span>A  Bit Of Myself</span>
+           </div>
 
-                   <div class="img-box">
-                        <!--  <i class="fas fa-user-tie"></i> -->
-                   </div>
+            <article class="about-text">
+             <i class="fas fa-quote-left"></i>
+                <br>
+                  <p>Hello,  Welcome to my website!</p>
+                  <p>My name is Dimitar and I am a self-taught web developer.
+                    I like to learn new things and expand my skillset within the industry.</p>
+              <i class="fas fa-quote-left"></i></p>
+             </article>
+       </div>
 
-                      <article>
-                        <p><i class="fas fa-quote-left"></i> Hello,  Welcome to my website!</p>
-                        <br>
-                        <p>I'm Dimitar a self-taught web developer who wants to learn more and evolve within the industry.</p>
-                        <br>
-                        <p>It started few years ago while I was trying to build a web site for my own purposes. I needed to learn HTML and CSS
-                           and I became familiar with them.<p>
-                             <br>
-
-                        <p>I haven't done some big and complexed projects yet, but I'm eager to be part of such environment
-                           and to be on top with the latest technologies in this constantly changing industry.  <i class="fas fa-quote-left"></i></p>
-                      </article>
-
-              </div>
-         </div>
-
-</section>
-
-
-
-<!--PORTFOLIO section -->
-<section id="projects" class="section">
-<h2 class="section-head"><i class="fas fa-archive"></i>  My Work</h2>
-
-  <div class="container">
-
-
-    <div class="projects-content">
-
-<!--Project 1-->
-      <div class="project slide">
-
-          <div class="project-image">
-              <a href="projects/On Click Slider/index.html" target="_blank">
-                <img src="images/mouse-drag-slider.jpg" alt="">
-               </a>
-            </div>
-
-            <div class="description">
-              <h3>Image Slider</h3>
-               <span>View Code</span>
-                 <p>Image Slider Gallery, created with Javascript mouse events,
-                   where you can move the slider to left and right holding the mouse key down on it.
-                 </p>
-            </div>
-
-        </div>
-
-<!--Project 2-->
-      <div class="project slide">
-
-            <div class="project-image">
-               <a href="projects/CSS GRID Gallery/GRID-Gallery.html" target="_blank">
-                      <img src="images/CSS-GRID-Gallery.jpg" alt="">
-               </a>
-            </div>
-            <div class="description">
-               <h3>Image Gallery</h3>
-               <span>View Code</span>
-               <p>Image Gallery with randomly sized images, aligined using CSS Grid.
-                 </p>
-            </div>
-     </div>
-
-<!--Project 3-->
-    <div class="project slide">
-
-      <div class="project-image">
-            <a href="https://guho3abap81.github.io/RockScissorsPaper/" target="_blank">
-            <img src="images/RSP-game.jpg" alt="">
-            </a>
-        </div>
-        <div class="description">
-            <h3>Rock, Scissors, Papper Game</h3>
-           <span>View Code</span>
-           <p>The famous "Rock, Scissors, Paper" game where the user plays against the computer.
-             JavaScript and CSS animation are used for better UI.
-           </p>
-        </div>
-
-     </div>
-
-<!--Project 4-->
-    <div class="project slide">
-
-          <div class="project-image">
-            <a href="projects/JAWS Game/index.html" target="_blank">
-              <img src="images/jaws.jpg" alt="">
-            </a>
-          </div>
-          <div class="description">
-            <h3>JAWS Game</h3>
-             <span>View Code</span>
-               <p>In this game the shark shows randomly from the waves,
-               where the goal is to click on it as many times as you can.
-              </p>
-          </div>
-     </div>
-
-<!--Project 5-->
-     <div class="project slide">
-
-
-        <div class="project-image">
-              <a href="https://guho3abap81.github.io/FlippingCards/" target="_blank">
-              <img src="images/flip-cards.jpg" alt="">
-              </a>
-          </div>
-          <div class="description">
-               <h3>Flipping Cards Game</h3>
-               <span>View Code</span>
-               <p>The goal here is to match two cards and keep them flipped, until you have all the cards opened.
-               CSS perspective property is used and Javasript to keep record on the cards.
-               </p>
-          </div>
-
-      </div>
-
-      <!--Project 6-->
-
-           <div class="project slide">
-
-             <div class="project-image">
-                 <a href="projects/Snowman/snowman.html" target="_blank">
-                    <img src="images/snowman.jpg" alt="">
-                 </a>
-             </div>
-
-             <div class="description">
-                  <h3>CSS Animation</h3>
-                   <a href="http://www.google.com" target="_blank"><span>View Code</span></a>
-                   <a href="" target="_blank"><span>Details</span></a>
-                   <p>Simple funny animation which I created while trying to improve my CSS skills,
-                     with Javascript added for triggering and repeating the animation.
-                   </p>
-             </div>
-
-
-            </div>
-
-     </div>
-   </div>
-
+</div>
 </section>
 
 <!---SKILLS section ------------------------------------------>
 
 <section id="skills" class="section slide">
-  <div class="container">
+
     <h2 class="section-head"><i class="fab fa-accusoft"></i>  Skills</h2>
 
-      <div id="boxes">
+      <div id="boxes" class="container">
 
-      <div class="box">
-        <div class="skill">
-          <img src="images/logo-photoshop.jpg" alt="">
-              <h3>PHOTOSHOP</h3>
-              <div class="content">
-                  <ul>
-                  <li>Creating PSD with Web layouts</li>
-                  <li>Editing images</li>
-                  </ul>
-              </div>
-         </div>
-      </div>
-
-    <div class="box">
-      <div class="skill">
-        <img src="images/logo-html5.png" alt="">
-          <h3>HTMl</h3>
-          <div class="content">
-            <ul>
-              <li>HTML files from scratch</li>
-              <li>Semantic HTML</li>
-              <li>Accessibility</li>
-              <li>Bootstrap</li>
-           </ul>
-          </div>
-       </div>
-     </div>
-
-     <div class="box">
-        <div class="skill">
-           <img src="images/logo-css.png" alt="">
-           <h3>CSS</h3>
-             <div class="content">
-                 <ul>
-                    <li>Web Pages Layout</li>
-                    <li>CSS Flexbox and Grid</li>
-                    <li>CSS Animations and Media queries</li>
-               </ul>
+            <div class="box">
+              <div class="skill">
+                <img src="images/logo-photoshop.jpg" alt=""/>
+                    <h3>PHOTOSHOP</h3>
+                    <div class="content">
+                        <ul>
+                        <li>Creating PSD with Web layouts</li>
+                        <li>Editing images</li>
+                        </ul>
+                    </div>
+               </div>
             </div>
-        </div>
-     </div>
+
+            <div class="box">
+              <div class="skill">
+                <img src="images/logo-html5.png" alt="">
+                  <h3>HTMl</h3>
+                  <div class="content">
+                    <ul>
+                      <li>HTML files from scratch</li>
+                      <li>Semantic HTML</li>
+                      <li>Accessibility</li>
+                      <li>Bootstrap</li>
+                   </ul>
+                  </div>
+               </div>
+             </div>
+
+             <div class="box">
+                <div class="skill">
+                   <img src="images/logo-css.png" alt="">
+                   <h3>CSS</h3>
+                     <div class="content">
+                         <ul>
+                            <li>Web Pages Layout</li>
+                            <li>CSS Flexbox and Grid</li>
+                            <li>CSS Animations and Media queries</li>
+                       </ul>
+                    </div>
+                </div>
+             </div>
 
       <div class="box">
            <div class="skill">
@@ -267,191 +135,284 @@
 
     </div>
 
-  </div>
 
 </section>
 
-<!--CONTACTS section-->
-<!--
-<section id="Ad" class="section">
-  <div class="wall">
-    <div class="brick">
 
-    </div>
-    <div class="brick">
+<!--PORTFOLIO section -->
+<section id="projects" class="section">
 
-    </div>
-    <div class="brick">
+<h2 class="section-head"><i class="fas fa-archive"></i>  My Work</h2>
 
-    </div>
-    <div class="brick">
+<div class="container shadow">
+    <div class="projects-content">
 
-    </div>
-    <div class="brick">
+<h3>UI APPLICATIONS</h3>
+<!--///////////////////////////////// AUTUMN LEAVES /////////////////////////////-->
+      <div class="project slide">
 
-    </div>
-    <div class="brick">
+          <div class="project-image">
+              <a href="https://guho3abap81.github.io/AutumnLeaves/" target="_blank">
+                <img src="images/autumn.jpg" alt="">
+               </a>
+            </div>
 
-    </div>
-    <div class="brick">
+            <div class="description">
+              <h4>Autumn Leaves</h4>
+                 <p>
+                   Autumn leaves randomly falling down with music background.
+                 </p>
 
-    </div>
-    <div class="brick">
+                 <div class="buttons">
+                   <a class="btn" href="https://github.com/guho3abap81/AutumnLeaves/blob/master/dist/index.html" target="_blank">View Code</a>
+                    <a class="btn" href="https://guho3abap81.github.io/AutumnLeaves/" target="_blank">Details</a>
+                 </div>
 
-    </div>
-    <div class="brick">
+            </div>
 
-    </div>
-    <div class="brick">
+        </div>
 
-    </div>
-    <div class="brick">
+<!--///////////////////////////////// IMAGE SLIDER /////////////////////////////-->
+      <div class="project slide">
 
-    </div>
-    <div class="brick">
+          <div class="project-image">
+              <a href="projects/On Click Slider/index.html" target="_blank">
+                <img src="images/mouse-drag-slider.jpg" alt="">
+               </a>
+            </div>
 
-    </div>
-    <div class="brick">
+            <div class="description">
+              <h4>Image Slider</h4>
 
-    </div>
-    <div class="brick">
+                 <p>Image Slider Gallery, created with Javascript mouse events,
+                   where you can move the slider to left and right holding the mouse key down on it.
+                 </p>
+                 <div class="buttons">
+                   <a class="btn" href="http://www.google.com" target="_blank">View Code</a>
+                   <a class="btn" href="" target="_blank">Details</a>
+                 </div>
+            </div>
 
-    </div>
-    <div class="brick">
+        </div>
 
-    </div>
-    <div class="brick">
+<!--///////////////////////////////// GRID IMAGE GALLERY /////////////////////////////-->
+      <div class="project slide">
 
-    </div>
+            <div class="project-image">
+               <a href="projects/CSS GRID Gallery/GRID-Gallery.html" target="_blank">
+                      <img src="images/CSS-GRID-Gallery.jpg" alt="">
+               </a>
+            </div>
+            <div class="description">
+               <h4>Image Gallery</h4>
 
+               <p>Image Gallery with randomly sized images, aligned using CSS Grid.
+                 </p>
+                 <div class="buttons">
+                   <a class="btn" href="http://www.google.com" target="_blank">View Code</a>
+                   <a class="btn" href="" target="_blank">Details</a>
+                 </div>
+            </div>
+     </div>
+<h3>GAMES</h3>
+<!--Project 3-->
+    <div class="project slide">
+
+      <div class="project-image">
+            <a href="https://guho3abap81.github.io/RockScissorsPaper/" target="_blank">
+            <img src="images/RSP-game.jpg" alt="">
+            </a>
+        </div>
+        <div class="description">
+            <h4>Rock, Scissors, Papper Game</h4>
+
+           <p>The famous "Rock, Scissors, Paper" game where the user plays against the computer.
+             JavaScript and CSS animation are used for better UI.
+           </p>
+           <div class="buttons">
+             <a class="btn" href="https://github.com/guho3abap81/RockScissorsPaper/blob/master/dist/main.js" target="_blank">View Code</a>
+             <a class="btn" href="https://guho3abap81.github.io/RockScissorsPaper/" target="_blank">Details</a>
+           </div>
+        </div>
+
+     </div>
+
+
+<!--Project 5-->
+     <div class="project slide">
+
+
+        <div class="project-image">
+              <a href="https://guho3abap81.github.io/FlippingCards/" target="_blank">
+              <img src="images/flip-cards.jpg" alt="">
+              </a>
+          </div>
+          <div class="description">
+               <h4>Flipping Cards Game</h4>
+               <p>The goal here is to match two cards and keep them flipped up, until you have all the cards opened.</p>
+               <div class="buttons">
+                 <a class="btn" href="https://github.com/guho3abap81/FlippingCards/blob/master/dist/script.js" target="_blank">View Code</a>
+                 <a class="btn" href="https://guho3abap81.github.io/FlippingCards/" target="_blank">Details</a>
+               </div>
+          </div>
+
+      </div>
+
+      <!--Project 6-->
+
+
+     </div>
   </div>
 </section>
--->
+
+
 <!--CONTACTS section-->
+
 <section id="contact" class="section">
 
-  <div class="container">
-    <h2 class="section-head"><i class="far fa-address-book"></i>  Contact Me</h2>
-  <div class="contact-box">
+  <h2 class="section-head"><i class="far fa-address-book"></i>  Contact Me</h2>
+
+  <div class="contact-box container">
 
       <div class="contact">
+          <a href="https://github.com/guho3abap81" target="_blank">
           <div class="icon">
               <i class="fab fa-github"></i>
           </div>
-            <a href="https://github.com/guho3abap81" target="_blank">
-            <div class="details">
+             <div class="details">
               <h3>GIT HUB</h3>
-                <address>
-                DIMITAR STAYKOV
-                </address>
+              <span>DIMITAR STAYKOV</span>
             </div>
-            </a>
-       </div>
+              </a>
+          </div>
 
       <div class="contact">
-        <div class="icon">
-        <i class="fab fa-linkedin"></i>
-        </div>
         <a href="https://www.linkedin.com/in/dimitar-staykov-249613158/" target="_blank">
-         <div class="details">
-          <h3>LINKED IN</h3>
-
-            DIMITAR STAYKOV
-
-        </div>
-       </a>
+         <div class="icon">
+          <i class="fab fa-linkedin"></i>
+           </div>
+              <div class="details">
+              <h3>LINKEDIN</h3>
+              <span> DIMITAR STAYKOV</span>
+             </div>
+          </a>
       </div>
 
       <div class="contact">
-        <div class="icon">
-           <i class="far fa-envelope "></i>
-        </div>
         <a href="http://mailto:DSTAYKOV19@GMAIL.COM" target="_blank">
-        <div class="details">
-          <h3>MAIL</h3>
-          <address>
-          DSTAYKOV19@GMAIL.COM
-          </address>
-        </div>
-        </a>
-      </div>
+         <div class="icon">
+             <i class="far fa-envelope "></i>
+              </div>
+                 <div class="details">
+                    <h3>EMAIL</h3>
+                  <span>DSTAYKOV19@gmail.com</span>
+               </div>
+               </a>
+            </div>
 
-  </div>
-<h4>London, United Kingdom</h3>
+
+        <div class="contact">
+            <a href="https://www.google.com/maps/place/%D0%9B%D0%BE%D0%BD%D0%B4%D0%BE%D0%BD/@51.528308,-0.3817765,10z/data=!3m1!4b1!4m5!3m4!1s0x47d8a00baf21de75:0x52963a5addd52a99!8m2!3d51.5073509!4d-0.1277583" target="_blank">
+             <div class="icon">
+                <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                       <div class="details">
+                        <h3>LOCATION</h3>
+                        <span>London, United Kingdom</span>
+                   </div>
+                </a>
+              </div>
+
   </div>
 
 </section>
 
-<!--FOOTER section-->
+
+<!-- -FOOTER section ---------------------------------------------->
 
 <footer id="footer">
-<h4>Dimitar Staykov      Front-end Developer</h4>
-  <div class="footer-menu">
+<h4>Dimitar Staykov </h4>
 
 
- <div class="footer-info">
-
-   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-   </p>
-
- </div>
-
-     <ul>
-        <li>
-          <div class="footer-about">
-            <i class="fas fa-pen"></i>
-            <h3>About Me</h3>
-          </div>
-        </li>
-
-        <li>
-          <div class="footer-skills">
-            <i class="fab fa-accusoft"></i>
-            <h3>My Skills</h3>
-          </div>
-        </li>
-
-        <li>
-          <div class="footer-work">
-            <i class="fas fa-archive"></i>
-            <h3>My Work</h3>
+    <ul class="nav-items">
+       <li>
+         <div class="footer-about">
+           <a href="#about"><i class="fas fa-pen"></i>About Me</a>
          </div>
-        </li>
+       </li>
 
-      <li>
+       <li>
+         <div class="footer-skills">
+            <a href="#skills"><i class="fab fa-accusoft"></i>My Skills</a>
+         </div>
+       </li>
+
+       <li>
+         <div class="footer-work">
+           <a href="#projects"><i class="fas fa-archive"></i>My Work</a>
+        </div>
+       </li>
+       <li>
         <div class="footer-contact">
-           <i class="far fa-address-book"></i>
-           <h3>Contact me</h3>
-         </div>
+        <a href="#contact"><i class="far fa-address-book"></i>Contact me</a>
+        </div>
       </li>
     </ul>
+
+<div class="footer-menu">
+
+       <div class="footer-left">
+           <p> "The perfection is achieved not when there is nothing left to add up,</p>
+           <p> but when there is nothing left to take away"</p>
+           <p> - Antoine de Saint-Exupery</p>
+      </div>
+
+      <div class="footer-right">
+         <ul class="social-items">
+            <a href="https://github.com/guho3abap81" target="_blank" title="github"><li><i class="fab fa-github"></i></li></a>
+            <a href="https://www.linkedin.com/in/dimitar-staykov-249613158/" target="_blank" title="linkedin"><li><i class="fab fa-linkedin"></i></li></a>
+            <a href="http://mailto:DSTAYKOV19@GMAIL.COM" target="_blank" title="e-mail"><li><i class="far fa-envelope"></i></li></a>
+          </ul>
+      </div>
+
   </div>
-     <span>Dimitar Staykov &copy; Copyright 2019</span>
+
+     <span>Copyright 2020 &copy; Dimitar Staykov</span>
 </footer>
 
-<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+//smooth scroll
+var clicked = $('.menu a');
+var navBar = $("#navbar").outerHeight();
+
+clicked.click(function(e){
+    e.preventDefault();
+    //animate body to  section +clicked hashtag position;
+    $('html, body').animate({
+    scrollTop: $(this.hash).offset().top - navBar},500);
+    $('.menu').removeClass("active",500);
+});
+
+</script>
 <script type="text/javascript" src="main.js"></script>
 <script type="text/javascript" src= "animations.js"></script>
+
 <script type="text/javascript">
 
-const overlay = document.querySelector(".overlay");
+const body = document.querySelector("body");
 let i = 1;
-setInterval(changeBackground,10000);
-overlay.addEventListener("click", changeBackground)
+//setInterval(changeBackground,10000);
+//body.addEventListener("click", changeBackground)
 
 function changeBackground(){
-i++;
-overlay.style.backgroundImage = `url('images/overlay${i}.jpg')`;
-  if(i == 5){
-            i = 0;
-          }
+    i++;
+    //overlay.style.animation = `background-pos 15s linear infinite`
+    body.style.backgroundImage = `url('images/overlay${i}.jpg')`;
 
-console.log(i)
-
+      if(i == 5){
+                i = 0;
+              }
 }
 </script>
 

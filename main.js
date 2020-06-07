@@ -1,39 +1,21 @@
-//Responsive NAV
-$(function(){
- menu = $('#navbar ul');
+const openMenu = document.querySelector("#openup");
+const menu = document.querySelector(".menu");
+const hamburgerIcon = "&#9776;";
+const closeIcon = "&#9932;";
+const links = document.querySelectorAll("#navbar ul li a");
 
-    $("#openup").on("click",function(e){
-      e.preventDefault();
-      menu.slideToggle();
-    });
+openMenu.addEventListener("click", ()=>{
+      menu.classList.toggle("active");
 
-    $(window).resize(function(){
-       var w = $(this).width();
-      if(w > 480 && menu.is(':hidden')){
-        menu.removeAttr('style');
-        }
-    });
-
-    $('nav li').on('click', function(e){
-       var w = $(window).width();
-        if( w < 480 ){
-          menu.slideToggle();
-        }
-    });
-
-    //$('.open-menu').height($(window).height());
-
+    if(menu.classList.contains("active")){
+      openMenu.innerHTML = closeIcon;
+      }else{
+      openMenu.innerHTML = hamburgerIcon;
+     }
 });
 
-//smooth scroll
-var clicked = $('.menu a');
-var navBar = $("#navbar").outerHeight();
-
-clicked.click(function(e){
-    e.preventDefault();
-    //animate body to  section +clicked hashtag position;
-    $('html, body').animate({
-    scrollTop: $(this.hash).offset().top - navBar},500);
-});
-
-/////////////////////////
+links.forEach(link => link.addEventListener("click", ()=>  {
+    menu.classList.remove("active")
+    openMenu.innerHTML = hamburgerIcon
+  })
+  );

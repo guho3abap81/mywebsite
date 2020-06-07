@@ -274,12 +274,12 @@ margin: 0;
 @media (max-width: 480px){
 
   .container{
-  height: 70vh;
+  height: 80vh;
   padding: 0 10px;
   }
   .game {
   width: 70vw;
-  bottom: 20px;
+  bottom: 50px;
   }
   .wave{
   height: calc(33.33% - 5px);

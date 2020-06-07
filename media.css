@@ -6,125 +6,185 @@
   text-align: center;
 
      }
-  #footer .footer-menu {
-    flex-direction: column;
-  }
+
+     .contact{
+       width: 180px;
+       height: 180px;
+
+     }
 
 }
 
 /*========= SCREENS under 780px ==============*/
 @media(max-width: 780px){
 
-  #about .about-content {
-  display: block;
-    }
-  #about .img-box {
-  margin: 0 auto;
+  #showcase h1{
+    font-size: 4rem ;
+    display: inline-block;
+  }
+  #showcase h2{
+    font-size: 1.8rem;
+  }
+
+.contact{
+  width: 150px;
+  height: 150px;
+  border: 5px solid white;
+}
+  .contact .icon{
+  font-size: 3rem;
+  }
+  .contact .details{
+    font-size: 0.8rem;
+    top: 50%;
   }
   .box ul li{
   font-size: 1rem;
   }
+
   #boxes {
     display: block;
   }
+
   .box {
     width: 300px;
+    height: 350px;
     margin: 20px auto;
   }
+
+  .project{
+  height: 60vh;
+}
   #projects .projects-content{
   padding: 10px;
     }
+
   #projects .project .description{
   font-size: 1rem;
     }
-    .contact-box{
-      flex-direction: column;
+
+    .footer-left, .footer-right{
+    width: 100%;
     }
-    .contact{
-      margin-bottom: 30px;
+    .nav-items{
+      grid-template-columns: repeat(3, 1fr);
     }
+
+  #footer .social-items {
+        width: 100%;
+      }
 }
 /*========= SCREENS under 480px ==============*/
 @media(max-width: 480px){
-  #showcase{
-    height:;
-  }
+
+    #showcase h1{
+      font-size: 3rem ;
+
+    }
+    #showcase h2{
+      font-size: 1.6rem;
+    }
+
     #navbar{
-      height: auto;
+      height: 40px;
       padding: 5px;
       z-index: 5;
       border-bottom: 0;
       background-color:;
     }
     #navbar ul{
-      height: auto;
-      display: none;
+      top: 40px;
+      position: absolute;
+      transform: translateY(-120%);
+      transform-origin: top;
+      flex-direction: column;
+      transition: 0.5s;
+      height: calc(100vh - 40px);
+      z-index: -1;
     }
     #navbar ul li {
       width: 100%;
-      float: left;
       position: relative;
     }
     #navbar ul li a{
       width: 100%;
+      font-size: 2rem;
       border-bottom: solid 1px var(-primary-color);
     }
     #navbar a#openup{
+      top: 5px;
       display: block;
     }
-#showcase .overlay{
-height: 50vh;
+.overlay-box{
+width: 100%;
 }
-#showcase h1{
-  font-size: 3rem ;
+.overlay{
+  width: 100%;
 }
-#showcase h2{
+
+.container {
+  padding: 20px;
+}
+.section h2{
   font-size: 1.8rem;
 }
-.container h2{
-  font-size: 1.5rem;
-}
-#about .img-box{
-  height: 250px;
+#about .head-box{
+font-size: 1.2rem;
 }
 #about .about-content article{
-  text-align: left;
+  top: 150px;
+  width: 70%;
 }
 #about .about-content p{
-  font-size: 1rem;
+  font-size: 1.2rem;
   }
 
 #projects .projects-content{
 
   }
+
 #projects .project{
+  flex-direction: column;
   height: 80vh;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2,1fr);
   }
-  .description {
-  grid-row: span 1;
+
+  .project h4{
+  font-size: 1rem;
   }
-  .project-image{
-  grid-row: span 1;
+
+  #projects .project .description{
+  font-size: 1rem;
+    }
+    .project .description .buttons{
+      width: 100%;
+      height: 30px;
+      flex-direction: ;
+    }
+  .project .description .btn {
+    width: 80px;
+    font-size: 0.9rem;
   }
-  .project-image img{
-   height: ;
+
+  .contact-box{
+   flex-direction: column;
+    }
+
+.contact {
+  margin-bottom: 20px;
   }
-  .project:nth-of-type(even) .project-image{
-    order: 1;
+
+  #footer h4 {
+  font-size: 1rem;
   }
-#footer {
-  padding: 20px 0;
-}
-#footer .footer-menu{
-  display: none;
-}
-#footer h4 {
-font-size: 1.2rem;
-margin: 0 5%;
-}
-#footer span{
-font-size: 1rem;
-}
+
+  .footer-left{
+    display: none;
+  }
+  .footer-right{
+    margin-bottom: 20px;
+  }
+
+  #footer span{
+  font-size: 1rem;
+  }
 }
